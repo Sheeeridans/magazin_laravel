@@ -17,6 +17,5 @@ Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('i
 Route::get('/categories', [\App\Http\Controllers\MainController::class, 'categories'])->name('categories');
 Route::get('/{category}', [\App\Http\Controllers\MainController::class, 'category'])->name('category');
 Route::get('/{category}/{product}', [\App\Http\Controllers\MainController::class, 'product'])->name('product');
-
 Route::get('/basket', [\App\Http\Controllers\MainController::class, 'basket'])->name('basket');
 Route::get('/basket/place', [\App\Http\Controllers\MainController::class, 'basketPlace'])->name('basket-place');
