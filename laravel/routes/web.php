@@ -18,6 +18,9 @@ Route::get('/categories', [\App\Http\Controllers\MainController::class, 'categor
 Route::get('/basket', [\App\Http\Controllers\BasketController::class, 'basket'])->name('basket');
 Route::get('/basket/place', [\App\Http\Controllers\BasketController::class, 'basketPlace'])->name('basket-place');
 Route::post('/basket/add/{id}', [\App\Http\Controllers\BasketController::class, 'basketAdd'])->name('basket-add');
+
+Route::post('/basket/remove/{id}', [\App\Http\Controllers\BasketController::class, 'basketRemove'])->name('basket-remove');
+
 Route::get('/{category}', [\App\Http\Controllers\MainController::class, 'category'])->name('category');
 Route::get('/{category}/{product}', [\App\Http\Controllers\MainController::class, 'product'])->name('product');
 
