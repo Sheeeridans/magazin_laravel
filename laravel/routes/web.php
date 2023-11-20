@@ -21,6 +21,8 @@ Route::post('/basket/add/{id}', [\App\Http\Controllers\BasketController::class, 
 
 Route::post('/basket/remove/{id}', [\App\Http\Controllers\BasketController::class, 'basketRemove'])->name('basket-remove');
 
+Route::post('/basket/place', [\App\Http\Controllers\BasketController::class, 'basketConfirm'])->name('basket-confirm');
+
 Route::get('/{category}', [\App\Http\Controllers\MainController::class, 'category'])->name('category');
 Route::get('/{category}/{product}', [\App\Http\Controllers\MainController::class, 'product'])->name('product');
 
