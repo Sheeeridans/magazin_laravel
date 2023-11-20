@@ -13,7 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('index');;
+Auth::routes([
+    'reset' => false,
+    'confirm' => false,
+    'verify' => false,
+]);
+Route::get('/logout', [\App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('get-logout');
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', [\App\Http\Controllers\MainController::class, 'index'])->name('index');
 Route::get('/categories', [\App\Http\Controllers\MainController::class, 'categories'])->name('categories');
 Route::get('/basket', [\App\Http\Controllers\BasketController::class, 'basket'])->name('basket');
 Route::get('/basket/place', [\App\Http\Controllers\BasketController::class, 'basketPlace'])->name('basket-place');
@@ -29,3 +37,7 @@ Route::get('/{category}/{product}', [\App\Http\Controllers\MainController::class
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
