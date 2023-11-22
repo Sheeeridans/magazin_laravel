@@ -27,7 +27,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                            <br>s
+                            <br>
                             @csrf
                             <input type="submit" class="btn btn-success" value="Подтвердить заказ">
                         </div>
