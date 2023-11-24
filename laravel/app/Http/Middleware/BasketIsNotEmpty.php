@@ -22,7 +22,7 @@ class BasketIsNotEmpty
         if (!is_null($orderId) && Order::getFullSum() > 0) {
             return $next($request);
         }
-        session()->flash('warning', 'Ваша корзина пуста!');
+        session()->flash('warning', __('basket.cart_is_empty'));
         return redirect()->route('index');
     }
 }

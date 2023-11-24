@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Http\Requests\ProductsFilterRequest;
 use App\Http\Requests\SubscriptionRequest;
 use App\Models\Subscription;
+use Illuminate\Support\Facades\App;
 
 class MainController extends Controller
 {
@@ -29,7 +30,7 @@ class MainController extends Controller
             }
         }
 
-        $products = $productsQuery->paginate(6)->withPath("?".$request->getQueryString());
+        $products = $productsQuery->paginate(6)->withPath("?" . $request->getQueryString());
 
         return view('index', compact('products'));
     }
@@ -51,6 +52,7 @@ class MainController extends Controller
         $product = Product::withTrashed()->byCode($productCode)->first();
         return view('product', compact('product'));
     }
+
     public function subscribe(SubscriptionRequest $request, Product $product)
     {
         Subscription::create([
@@ -58,6 +60,17 @@ class MainController extends Controller
             'product_id' => $product->id,
         ]);
 
-        return redirect()->back()->with('success', 'Спасибо, мы сообщим вам о поступлении товара');
+        return redirect()->back()->with('success', __('product.we_will_update'));
+    }
+
+    public function changeLocale($locale)
+    {
+        $availableLocales = ['ru', 'en'];
+        if (!in_array($locale, $availableLocales)) {
+            $locale = config('app.locale');
+        }
+        session(['locale' => $locale]);
+        App::setLocale($locale);
+        return redirect()->back();
     }
 }
