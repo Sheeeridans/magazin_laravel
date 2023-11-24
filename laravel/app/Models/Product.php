@@ -5,13 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Translatable;
+use App\Services\CurrencyConversion;
 
 class Product extends Model
 {
     use SoftDeletes, Translatable;
 
     protected $fillable = [
-        'name', 'code', 'price', 'category_id', 'description', 'image', 'hit', 'new', 'recommend', 'count', 'name_en',
+        'name',
+        'code',
+        'price',
+        'category_id',
+        'description',
+        'image',
+        'hit',
+        'new',
+        'recommend',
+        'count',
+        'name_en',
         'description_en'
     ];
 
@@ -81,6 +92,11 @@ class Product extends Model
     public function isRecommend()
     {
         return $this->recommend === 1;
+    }
+
+    public function getPriceAttribute($value)
+    {
+        return round(CurrencyConversion::convert($value), 2);
     }
 }
 

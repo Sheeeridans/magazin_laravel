@@ -9,6 +9,7 @@ use App\Http\Requests\ProductsFilterRequest;
 use App\Http\Requests\SubscriptionRequest;
 use App\Models\Subscription;
 use Illuminate\Support\Facades\App;
+use App\Models\Currency;
 
 class MainController extends Controller
 {
@@ -71,6 +72,13 @@ class MainController extends Controller
         }
         session(['locale' => $locale]);
         App::setLocale($locale);
+        return redirect()->back();
+    }
+
+    public function changeCurrency($currencyCode)
+    {
+        $currency = Currency::byCode($currencyCode)->firstOrFail();
+        session(['currency' => $currency->code]);
         return redirect()->back();
     }
 }
