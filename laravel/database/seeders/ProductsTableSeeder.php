@@ -24,6 +24,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 1,
                 'image' => 'products/iphone_x.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'iPhone X 64GB',
+                'description_en' => 'A great advanced phone with 64 gb of memory',
             ],
             [
                 'name' => 'iPhone X 256GB',
@@ -33,6 +35,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 1,
                 'image' => 'products/iphone_x_silver.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'iPhone X 256GB',
+                'description_en' => 'A great advanced phone with 256 gb of memory',
             ],
             [
                 'name' => 'HTC One S',
@@ -42,6 +46,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 1,
                 'image' => 'products/htc_one_s.png',
                 'count' => rand(0, 10),
+                'name_en' => 'HTC One S',
+                'description_en' => 'Why pay for the extra? The legendary HTC One S',
             ],
             [
                 'name' => 'iPhone 5SE',
@@ -51,6 +57,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 1,
                 'image' => 'products/iphone_5.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'iPhone 5SE',
+                'description_en' => 'Great classic iPhone',
             ],
             [
                 'name' => 'Наушники Beats Audio',
@@ -60,6 +68,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 2,
                 'image' => 'products/beats.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Beats Audio Headphones',
+                'description_en' => 'Great sound from Dr. Dre',
             ],
             [
                 'name' => 'Камера GoPro',
@@ -69,6 +79,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 2,
                 'image' => 'products/gopro.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'GoPro Camera',
+                'description_en' => 'Capture the brightest moments with this camera',
             ],
             [
                 'name' => 'Камера Panasonic HC-V770',
@@ -78,6 +90,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 2,
                 'image' => 'products/video_panasonic.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Panasonic HC-V770 Camera',
+                'description_en' => 'Serious video shooting requires a serious camera. Panasonic HC-V770 is the best choice for this purpose!',
             ],
             [
                 'name' => 'Кофемашина DeLongi',
@@ -87,6 +101,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 3,
                 'image' => 'products/delongi.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'DeLongi Coffee Machine',
+                'description_en' => 'A good morning starts with a good coffee!',
             ],
             [
                 'name' => 'Холодильник Haier',
@@ -96,6 +112,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 3,
                 'image' => 'products/haier.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Haier Refrigerator',
+                'description_en' => 'For a large family, a large refrigerator!',
             ],
             [
                 'name' => 'Блендер Moulinex',
@@ -105,6 +123,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 3,
                 'image' => 'products/moulinex.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Moulinex Blender',
+                'description_en' => 'For the most daring ideas',
             ],
             [
                 'name' => 'Мясорубка Bosch',
@@ -114,6 +134,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 3,
                 'image' => 'products/bosch.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Bosch Meat Grinder',
+                'description_en' => 'Do you like homemade cutlets? You should definitely look at this meat grinder!',
             ],
             [
                 'name' => 'Samsung Galaxy J6',
@@ -123,6 +145,8 @@ class ProductsTableSeeder extends Seeder
                 'category_id' => 1,
                 'image' => 'products/samsung_j6.jpg',
                 'count' => rand(0, 10),
+                'name_en' => 'Samsung Galaxy J6',
+                'description_en' => 'A modern entry-level phone',
             ],
         ]);
     }
