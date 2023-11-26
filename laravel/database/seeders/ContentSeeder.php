@@ -87,7 +87,7 @@ class ContentSeeder extends Seeder
                 'name' => 'Мобильные телефоны',
                 'name_en' => 'Mobile phones',
                 'code' => 'mobiles',
-                'description' => 'В этом разделе вы найдёте самые популярные мобильные телефонамы по отличным ценам!',
+                'description' => 'В этом разделе вы найдёте самые популярные мобильные телефоны по отличным ценам!',
                 'description_en' => 'Mobile phones section with best prices for best popular phones!',
                 'image' => 'categories/mobile.jpg',
                 'products' => [
@@ -365,8 +365,8 @@ class ContentSeeder extends Seeder
                 $product['created_at'] = Carbon::now();
                 $product['updated_at'] = Carbon::now();
                 $product['hit'] = !boolval(rand(0, 3));
-                $product['recommend'] = rand(0, 1);
-                $product['new'] = rand(0, 1);
+                $product['recommend'] = !boolval(rand(0, 2));
+                $product['new'] = !boolval(rand(0, 4));
                 $product['category_id'] = $categoryId;
 
                 if (isset($product['properties'])) {
