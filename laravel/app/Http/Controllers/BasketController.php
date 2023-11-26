@@ -7,6 +7,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use App\Classes\Basket;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Sku;
 
 class BasketController extends Controller
 {
@@ -39,21 +40,21 @@ class BasketController extends Controller
         return view('order', compact('order'));
     }
 
-    public function basketAdd(Product $product)
+    public function basketAdd(Sku $sku)
     {
-        $result = (new Basket(true))->addProduct($product);
+        $result = (new Basket(true))->addSku($sku);
         if ($result) {
-            session()->flash('success', __('basket.added') . $product->name);
+            session()->flash('success', __('basket.added').$sku->product->__('name'));
         } else {
-            session()->flash('warning', $product->name . __('basket.not_available_more'));
+            session()->flash('warning', $sku->product->__('name') . __('basket.not_available_more'));
         }
         return redirect()->route('basket');
     }
 
-    public function basketRemove(Product $product)
+    public function basketRemove(Sku $sku)
     {
-        (new Basket())->removeProduct($product);
-        session()->flash('warning', __('basket.removed') . $product->name);
+        (new Basket())->removeSku($sku);
+        session()->flash('warning', __('basket.removed').$sku->product->__('name'));
         return redirect()->route('basket');
     }
 }

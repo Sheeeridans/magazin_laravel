@@ -22,11 +22,11 @@ Auth::routes([
 Route::get('locale/{locale}', 'MainController@changeLocale')->name('locale');
 Route::get('currency/{currencyCode}', 'MainController@changeCurrency')->name('currency');
 
-Route::get('reset', 'ResetController@reset')->name('reset');
 
 Route::get('/logout', 'Auth\LoginController@logout')->name('get-logout');
 
 Route::middleware(['set_locale'])->group(function () {
+    Route::get('reset', 'ResetController@reset')->name('reset');
     Route::middleware(['auth'])->group(function () {
         Route::group([
             'prefix' => 'person',
@@ -56,21 +56,21 @@ Route::middleware(['set_locale'])->group(function () {
 
     Route::get('/', 'MainController@index')->name('index');
     Route::get('/categories', 'MainController@categories')->name('categories');
-    Route::post('subscription/{product}', 'MainController@subscribe')->name('subscription');
+    Route::post('subscription/{sku}', 'MainController@subscribe')->name('subscription');
 
     Route::group(['prefix' => 'basket'], function () {
-        Route::post('/add/{product}', 'BasketController@basketAdd')->name('basket-add');
+        Route::post('/add/{sku}', 'BasketController@basketAdd')->name('basket-add');
 
         Route::group([
             'middleware' => 'basket_not_empty',
         ], function () {
             Route::get('/', 'BasketController@basket')->name('basket');
             Route::get('/place', 'BasketController@basketPlace')->name('basket-place');
-            Route::post('/remove/{product}', 'BasketController@basketRemove')->name('basket-remove');
+            Route::post('/remove/{sku}', 'BasketController@basketRemove')->name('basket-remove');
             Route::post('/place', 'BasketController@basketConfirm')->name('basket-confirm');
         });
     });
 
     Route::get('/{category}', 'MainController@category')->name('category');
-    Route::get('/{category}/{product}', 'MainController@product')->name('product');
+    Route::get('/{category}/{product}/{sku}', 'MainController@sku')->name('sku');
 });
