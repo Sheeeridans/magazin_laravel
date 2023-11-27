@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+/*Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});*/
+
+Route::middleware(['auth:api'])->group(function () {
+    Route::get('skus', 'Api\SkusController@getSkus');
 });
 
-Route::get('skus', 'Api\SkusController@getSkus');
