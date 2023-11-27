@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use App\Classes\Basket;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Sku;
+use App\Http\Requests\AddCouponRequest;
+use App\Models\Coupon;
 
 class BasketController extends Controller
 {
@@ -19,8 +21,14 @@ class BasketController extends Controller
 
     public function basketConfirm(Request $request)
     {
+        $basket = new Basket();
+        if ($basket->getOrder()->hasCoupon() && !$basket->getOrder()->coupon->availableForUse()) {
+            $basket->clearCoupon();
+            session()->flash('warning', 'Купон не доступен для использования');
+            return redirect()->route('basket');
+        }
         $email = Auth::check() ? Auth::user()->email : $request->email;
-        if ((new Basket())->saveOrder($request->name, $request->phone, $email)) {
+        if ($basket->saveOrder($request->name, $request->phone, $email)) {
             session()->flash('success', __('basket.you_order_confirmed'));
         } else {
             session()->flash('warning', __('basket.you_cant_order_more'));
@@ -46,7 +54,7 @@ class BasketController extends Controller
         if ($result) {
             session()->flash('success', __('basket.added').$sku->product->__('name'));
         } else {
-            session()->flash('warning', $sku->product->__('name') . __('basket.not_available_more'));
+            session()->flash('warning', $sku->product->__('name').__('basket.not_available_more'));
         }
         return redirect()->route('basket');
     }
@@ -55,6 +63,20 @@ class BasketController extends Controller
     {
         (new Basket())->removeSku($sku);
         session()->flash('warning', __('basket.removed').$sku->product->__('name'));
+        return redirect()->route('basket');
+    }
+
+    public function setCoupon(AddCouponRequest $request)
+    {
+        $coupon = Coupon::where('code', $request->coupon)->first();
+
+        if ($coupon->availableForUse()) {
+            (new Basket())->setCoupon($coupon);
+            session()->flash('success', 'Купон был добавлен к заказу');
+        } else {
+            session()->flash('warning', 'Купон не может быть использован');
+        }
+
         return redirect()->route('basket');
     }
 }

@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Mail\OrderCreated;
 use Illuminate\Support\Facades\Mail;
 use App\Services\CurrencyConversion;
+use App\Models\Coupon;
 
 class Basket
 {
@@ -48,8 +49,7 @@ class Basket
     public function countAvailable($updateCount = false)
     {
         $skus = collect([]);
-        foreach ($this->order->skus as $orderSku)
-        {
+        foreach ($this->order->skus as $orderSku) {
             $sku = Sku::find($orderSku->id);
             if ($orderSku->countInOrder > $sku->count) {
                 return false;
@@ -105,5 +105,15 @@ class Basket
         }
 
         return true;
+    }
+
+    public function setCoupon(Coupon $coupon)
+    {
+        $this->order->coupon()->associate($coupon);
+    }
+
+    public function clearCoupon()
+    {
+        $this->order->coupon()->dissociate();
     }
 }
