@@ -27,10 +27,12 @@
                 <td>Описание</td>
                 <td>{{ $coupon->description }}</td>
             </tr>
-            <tr>
-                <td>Валюта</td>
-                <td>{{ $coupon->currency->code }}</td>
-            </tr>
+            @isset($coupon->currency)
+                <tr>
+                    <td>Валюта</td>
+                    <td>{{ $coupon->currency->code }}</td>
+                </tr>
+            @endisset
             <tr>
                 <td>Абсолютное значение</td>
                 <td>@if($coupon->isAbsolute()) Да @else Нет @endif</td>
