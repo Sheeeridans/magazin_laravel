@@ -40,8 +40,8 @@
             @endforeach
             </tbody>
         </table>
-        {{ $propertyOptions->links() }}
         <a class="btn btn-success" type="button"
            href="{{ route('property-options.create', $property) }}">Добавить вариант свойства</a>
+        {{ $propertyOptions->links('pagination::bootstrap-4') }}
     </div>
 @endsection

@@ -36,6 +36,7 @@
                         <li><a href="{{ route('coupons.index') }}">Купоны</a></li>
                         <li><a href="{{ route('merchants.index') }}">Поставщики</a></li>
                         <li><a href="{{ route('home') }}">Заказы</a></li>
+                        <li><a href="{{ route('reset') }}">Сброс данных с сайта</a></li>
                         @endadmin
                     </ul>
                     @guest

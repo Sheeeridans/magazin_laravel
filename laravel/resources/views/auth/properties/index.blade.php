@@ -37,7 +37,7 @@
             @endforeach
             </tbody>
         </table>
-        {{ $properties->links() }}
+        {{ $properties->links('pagination::bootstrap-4') }}
         <a class="btn btn-success" type="button"
            href="{{ route('properties.create') }}">Добавить свойство</a>
     </div>

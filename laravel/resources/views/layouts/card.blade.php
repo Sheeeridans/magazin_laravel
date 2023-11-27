@@ -18,7 +18,16 @@
             <h3>{{ $sku->product->__('name') }}</h3>
             @isset($sku->product->properties)
                 @foreach ($sku->propertyOptions as $propertyOption)
-                    <h4>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h4>
+
+
+                    @if($propertyOption->__('name') === null)
+                        <h4></h4>
+                        <h4></h4>
+                    @else
+                        <h4>{{ $propertyOption->property->__('name') }}: {{ $propertyOption->__('name') }}</h4>
+                    @endif
+
+
                 @endforeach
             @endisset
             <p>{{ $sku->price }} {{ $currencySymbol }}</p>

@@ -44,7 +44,7 @@
             @endforeach
             </tbody>
         </table>
-        {{ $merchants->links() }}
+        {{ $merchants->links('pagination::bootstrap-4') }}
         <a class="btn btn-success" type="button"
            href="{{ route('merchants.create') }}">Добавить поставщика</a>
     </div>

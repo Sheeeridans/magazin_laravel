@@ -37,8 +37,8 @@
             @endforeach
             </tbody>
         </table>
-        {{ $skus->links() }}
         <a class="btn btn-success" type="button"
            href="{{ route('skus.create', $product) }}">Добавить Sku</a>
+        {{ $skus->links('pagination::bootstrap-4') }}
     </div>
 @endsection
