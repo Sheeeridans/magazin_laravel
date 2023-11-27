@@ -42,7 +42,7 @@
                     Скидка
                 </td>
                 <td>
-                    {{ $coupon->value }} @if($coupon->isAbsolute()) Руб. @else % @endif
+                    {{ $coupon->value }} @if($coupon->isAbsolute()) {{ $coupon->currency->code }} @else % @endif
                 </td>
             </tr>
             <tr>
