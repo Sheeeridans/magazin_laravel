@@ -11,6 +11,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/starter-template.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Circle-icons-computer.svg/1200px-Circle-icons-computer.svg.png">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
