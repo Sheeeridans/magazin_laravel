@@ -78,7 +78,7 @@ class Basket
 
     public function removeSku(Sku $sku)
     {
-        if ($this->order->skus->contains($sku)) {
+        if ($this->order->skus->contains($sku->id)) {
             $pivotRow = $this->order->skus->where('id', $sku->id)->first();
             if ($pivotRow->countInOrder < 2) {
                 $this->order->skus->pop($sku->id);
