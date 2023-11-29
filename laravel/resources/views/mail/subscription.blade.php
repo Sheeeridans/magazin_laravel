@@ -1,3 +1,3 @@
-@lang('mail.subscription.dear_client') {{ $sku->__('name') }} @lang('mail.subscription.appeared_in_stock').
+<p>Уважаемый клиент, товар {{ $sku->__('name') }} появился в наличии.</p>
 
-<a href="{{ route('product', [$sku->category->code, $sku->code]) }}">@lang('mail.subscription.more_info')</a>
+<p><a href="{{ route('product', [$sku->category->code, $sku->code]) }}">Узнать подробности...</a></p>

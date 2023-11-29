@@ -9,20 +9,18 @@
         <table class="table">
             <tbody>
             <tr>
-                <th>
-                    #
-                </th>
-                <th>
-                    Товарное предложение (свойства)
-                </th>
-                <th>
-                    Действия
-                </th>
+                <th>#</th>
+                <th>Товарное предложение (свойства)</th>
+                <th>Цена</th>
+                <th>Кол-во в наличии</th>
+                <th>Действия</th>
             </tr>
             @foreach($skus as $sku)
                 <tr>
                     <td>{{ $sku->id }}</td>
                     <td>{{ $sku->propertyOptions->map->name->implode(', ') }}</td>
+                    <td>{{ $sku->price }}</td>
+                    <td>{{ $sku->count }}</td>
                     <td>
                         <div class="btn-group" role="group">
                             <form action="{{ route('skus.destroy', [$product, $sku]) }}" method="POST">
