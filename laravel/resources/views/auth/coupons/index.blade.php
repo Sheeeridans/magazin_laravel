@@ -15,6 +15,12 @@
                     Код
                 </th>
                 <th>
+                    Номинал
+                </th>
+                <th>
+                    Действителен до
+                </th>
+                <th>
                     Описание
                 </th>
                 <th>
@@ -25,6 +31,14 @@
                 <tr>
                     <td>{{ $coupon->id}}</td>
                     <td>{{ $coupon->code }}</td>
+                    <td>
+                        {{ $coupon->value }} @if($coupon->isAbsolute()) {{ $coupon->currency->code }} @else % @endif
+                    </td>
+                    <td>
+                @if($coupon->expired_at)
+                        {{ $coupon->expired_at->format('d.m.Y') }}
+                @endisset
+                    </td>
                     <td>{{ $coupon->description }}</td>
                     <td>
                         <div class="btn-group" role="group">

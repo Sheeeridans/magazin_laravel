@@ -26,7 +26,7 @@
                 @endisset
                 @csrf
                 <div class="input-group row">
-                    <label for="code" class="col-sm-2 col-form-label">Код: </label>
+                    <label for="code" class="col-sm-4 col-form-label">Код: </label>
                     <div class="col-sm-6">
                         @include('auth.layouts.error', ['fieldName' => 'code'])
                         <input type="text" class="form-control" name="code" id="code"
@@ -35,7 +35,7 @@
                 </div>
                 <br>
                 <div class="input-group row">
-                    <label for="value" class="col-sm-2 col-form-label">Номинал: </label>
+                    <label for="value" class="col-sm-4 col-form-label">Номинал: </label>
                     <div class="col-sm-6">
                         @include('auth.layouts.error', ['fieldName' => 'value'])
                         <input type="text" class="form-control" name="value" id="value"
@@ -44,7 +44,7 @@
                 </div>
                 <br>
                 <div class="input-group row">
-                    <label for="currency_id" class="col-sm-2 col-form-label">Валюта: </label>
+                    <label for="currency_id" class="col-sm-4 col-form-label">Валюта: </label>
                     <div class="col-sm-6">
                         @include('auth.layouts.error', ['fieldName' => 'currency_id'])
                         <select name="currency_id" id="currency_id" class="form-control">
@@ -67,8 +67,8 @@
                 'only_once' => 'Купон может быть использован только один раз',
                 ] as $field => $title)
                     <div class="form-group row">
-                        <label for="code" class="col-sm-2 col-form-label">{{ $title }}: </label>
-                        <div class="col-sm-10">
+                        <label for="code" class="col-sm-4 col-form-label">{{ $title }}: </label>
+                        <div class="col-sm-6">
                             <input type="checkbox" name="{{$field}}" id="{{$field}}"
                                    @if(isset($coupon) && $coupon->$field === 1)
                                    checked="'checked"
@@ -78,9 +78,8 @@
                     </div>
                     <br>
                 @endforeach
-                <br>
                 <div class="input-group row">
-                    <label for="expired_at" class="col-sm-2 col-form-label">Использовать до: </label>
+                    <label for="expired_at" class="col-sm-4 col-form-label">Использовать до: </label>
                     <div class="col-sm-6">
                         @include('auth.layouts.error', ['fieldName' => 'expired_at'])
                         <input type="date" class="form-control" name="expired_at" id="expired_at"
@@ -90,7 +89,7 @@
                 </div>
                 <br>
                 <div class="input-group row">
-                    <label for="description" class="col-sm-2 col-form-label">Описание: </label>
+                    <label for="description" class="col-sm-4 col-form-label">Описание: </label>
                     <div class="col-sm-6">
                         @include('auth.layouts.error', ['fieldName' => 'description'])
                         <textarea name="description" id="description" cols="72"
