@@ -45,6 +45,10 @@ class ContentSeeder extends Seeder
                         'name' => 'Синий',
                         'name_en' => 'Blue',
                     ],
+                    [
+                        'name' => '-',
+                        'name_en' => '-',
+                    ],
                 ],
             ],
             [
@@ -52,16 +56,28 @@ class ContentSeeder extends Seeder
                 'name_en' => 'Memory',
                 'options' => [
                     [
-                        'name' => '256гб',
-                        'name_en' => '256gb',
+                        'name' => '256Гб',
+                        'name_en' => '256Gb',
                     ],
                     [
-                        'name' => '64гб',
-                        'name_en' => '64gb',
+                        'name' => '64Гб',
+                        'name_en' => '64Gb',
                     ],
                     [
-                        'name' => '128гб',
-                        'name_en' => '128gb',
+                        'name' => '128Гб',
+                        'name_en' => '128Gb',
+                    ],
+                    [
+                        'name' => '512Гб',
+                        'name_en' => '512Gb',
+                    ],
+                    [
+                        'name' => '1Тб',
+                        'name_en' => '1Tb',
+                    ],
+                    [
+                        'name' => '-',
+                        'name_en' => '-',
                     ],
                 ],
             ],
@@ -84,6 +100,262 @@ class ContentSeeder extends Seeder
 
         $categories = [
             [
+                'name' => 'Системные блоки',
+                'name_en' => 'System blocks',
+                'code' => 'pc',
+                'description' => 'В этом разделе вы найдёте самые популярные системные блоки по отличным ценам!',
+                'description_en' => 'In this section you will find the most popular system blocks at great prices!',
+                'image' => 'categories/pc.jpg',
+                'products' => [
+                    [
+                        'name' => 'Компьютер iRU Game 310H5GMA',
+                        'name_en' => 'Computer iRU Game 310H5GMA',
+                        'code' => 'iru_game_1',
+                        'description' => 'Intel Core i5 11400F, DDR4 16ГБ, 1ТБ(SSD), NVIDIA GeForce RTX 3050 - 8192 Мб, Free DOS',
+                        'description_en' => 'Intel Core i5 11400F, DDR4 16ГБ, 1ТБ(SSD), NVIDIA GeForce RTX 3050 - 8192 Мб, Free DOS',
+                        'image' => 'products/iru_game_1.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 8,
+                            ],
+                            [
+                                2, 11,
+                            ],
+                            [
+                                2, 12,
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Компьютер HYPERPC Lumen 7',
+                        'name_en' => 'Computer HYPERPC Lumen 7',
+                        'code' => 'HYPERPC_Lumen_7',
+                        'description' => 'Intel Core i7 14700KF, DDR5 32ГБ, 2ТБ(SSD), NVIDIA GeForce RTX 4070 - 12288 Мб, Windows 11 Home',
+                        'description_en' => 'Intel Core i7 14700KF, DDR5 32ГБ, 2ТБ(SSD), NVIDIA GeForce RTX 4070 - 12288 Мб, Windows 11 Home',
+                        'image' => 'products/HYPERPC_Lumen_7.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 8,
+                            ],
+                            [
+                                2, 11,
+                            ],
+                            [
+                                2, 12,
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Компьютер iRU Office 510B6GM',
+                        'name_en' => 'Computer iRU Office 510B6GM',
+                        'code' => 'iru_office',
+                        'description' => 'Intel Core i5 12400, DDR4 16ГБ, 512ГБ(SSD), Intel UHD Graphics 730, Free DOS',
+                        'description_en' => 'Intel Core i5 12400, DDR4 16ГБ, 512ГБ(SSD), Intel UHD Graphics 730, Free DOS',
+                        'image' => 'products/iru_office.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 8,
+                            ],
+                            [
+                                2, 11,
+                            ],
+                            [
+                                2, 12,
+                            ],
+                        ],
+                    ],
+                ]
+            ],
+            [
+                'name' => 'Ноутбуки',
+                'name_en' => 'Laptops',
+                'code' => 'laptops',
+                'description' => 'В этом разделе вы найдёте самые популярные Ноутбуки по отличным ценам!',
+                'description_en' => 'In this section you will find the most popular laptops at great prices!',
+                'image' => 'categories/laptops.jpg',
+                'products' => [
+                    [
+                        'name' => 'Ноутбук Huawei MateBook D 15 BoDE-WDH9',
+                        'name_en' => 'Huawei MateBook D 15 BoDE-WDH9',
+                        'code' => 'huawei_matebook',
+                        'description' => '15.6", IPS, Intel Core i5 1155G7 2.5ГГц, 4-ядерный, 8ГБ DDR4, 256ГБ SSD, Intel Iris Xe graphics',
+                        'description_en' => '15.6", IPS, Intel Core i5 1155G7 2.5ГГц, 4-ядерный, 8ГБ DDR4, 256ГБ SSD, Intel Iris Xe graphics',
+                        'image' => 'products/huawei_matebook.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 8,
+                            ],
+                            [
+                                2, 11,
+                            ],
+                            [
+                                2, 12,
+                            ],
+                            [
+                                3, 8,
+                            ],
+                            [
+                                3, 11,
+                            ],
+                            [
+                                3, 12,
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Ноутбук игровой MSI GF63 Thin 11UCX-1609XRU',
+                        'name_en' => 'MSI GF63 Thin 11UCX-1609XRU',
+                        'code' => 'msi_gaming',
+                        'description' => '15.6", IPS, Intel Core i5 11260H 2.6ГГц, 6-ядерный, 16ГБ DDR4, 256ГБ SSD, NVIDIA GeForce RTX 2050 - 4 ГБ, Free DOS',
+                        'description_en' => '15.6", IPS, Intel Core i5 11260H 2.6ГГц, 6-ядерный, 16ГБ DDR4, 256ГБ SSD, NVIDIA GeForce RTX 2050 - 4 ГБ, Free DOS',
+                        'image' => 'products/msi_gaming.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 11,
+                            ],
+                            [
+                                2, 12,
+                            ],
+                            [
+                                6, 11,
+                            ],
+                            [
+                                6, 12,
+                            ],
+                        ],
+                    ],
+                    [
+                        'name' => 'Ноутбук Digma EVE 15 C423 [9s7-16r612-1609]',
+                        'name_en' => 'Digma EVE 15 C423 [9s7-16r612-1609]',
+                        'code' => 'digmabook',
+                        'description' => '15.6", IPS, AMD Ryzen 3 3200U 2.6ГГц, 2-ядерный, 8ГБ DDR4, 512ГБ SSD, AMD Radeon Vega 3, Windows 11 Professional',
+                        'description_en' => '15.6", IPS, AMD Ryzen 3 3200U 2.6ГГц, 2-ядерный, 8ГБ DDR4, 512ГБ SSD, AMD Radeon Vega 3, Windows 11 Professional',
+                        'image' => 'products/digmabook.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 8,
+                            ],
+                            [
+                                2, 11,
+                            ],
+                            [
+                                3, 8,
+                            ],
+                            [
+                                4, 11,
+                            ],
+                        ],
+                    ],
+                ]
+            ],
+            [
+                'name' => 'Комплектующие для ПК',
+                'name_en' => 'PC Accessories',
+                'code' => 'komplektuyuschie-dlya-pk',
+                'description' => 'В этом разделе вы найдёте самые популярные комплектующие для ПК по отличным ценам!',
+                'description_en' => 'In this section you will find the most popular PC Accessories at great prices!',
+                'image' => 'categories/komplektuyuschie-dlya-pk.jpg',
+                'products' => [
+                    [
+                        'name' => 'Процессор Intel Core i5 12400F, OEM',
+                        'name_en' => 'Intel Core i5 12400F Processor, OEM',
+                        'code' => 'intel_core_i5',
+                        'description' => 'Процессор Intel Core i5 12400F, LGA 1700, OEM [cm8071504650609s rl5z]',
+                        'description_en' => 'Intel Core i5 12400F processor, LGA 1700, OEM [CM8071504650609S RL5Z]',
+                        'image' => 'products/intel_core_i5.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                7, 13,
+                            ],
+                        ],
+                    ],
+
+
+                ]
+            ],
+
+            [
+                'name' => 'Мониторы',
+                'name_en' => 'Monitors',
+                'code' => 'monitors',
+                'description' => 'В этом разделе вы найдёте самые популярные Мониторы по отличным ценам!',
+                'description_en' => 'In this section you will find the most popular monitors at great prices!',
+                'image' => 'categories/monitors.jpg',
+                'products' => [
+                    [
+                        'name' => 'Монитор Huawei MateView SE SSN-24BZ 23.8"',
+                        'name_en' => 'Huawei MateView SE SSN-24BZ 23.8" Monitor',
+                        'code' => 'huawei_matewiew',
+                        'description' => 'Конструктив: регулировка наклона, крепление VESA отсутствует,',
+                        'description_en' => 'Constructive: tilt adjustment, no VESA mount,',
+                        'image' => 'products/huawei_matewiew.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 13,
+                            ],
+                        ],
+                    ],
+
+
+                ]
+            ],
+            [
+                'name' => 'Портативная техника',
+                'name_en' => 'Portable',
+                'code' => 'portable',
+                'description' => 'Раздел с портативной техникой.',
+                'description_en' => 'Section with portables.',
+                'image' => 'categories/portable.jpg',
+                'products' => [
+                    [
+                        'name' => 'Современные наушники Beats Audio',
+                        'name_en' => 'Headphones Beats Audio',
+                        'code' => 'beats_audio',
+                        'description' => 'Отличный звук от Dr. Dre',
+                        'description_en' => 'Great sound from Dr. Dre',
+                        'image' => 'products/beats.jpg',
+                        'properties' => [
+                            1, 2,
+                        ],
+                        'options' => [
+                            [
+                                2, 13,
+                            ],
+                            [
+                                5, 13,
+                            ],
+                            [
+                                6, 13,
+                            ]
+                        ],
+                    ],
+                ],
+            ],
+            [
                 'name' => 'Мобильные телефоны',
                 'name_en' => 'Mobile phones',
                 'code' => 'mobiles',
@@ -92,45 +364,8 @@ class ContentSeeder extends Seeder
                 'image' => 'categories/mobile.jpg',
                 'products' => [
                     [
-                        'name' => 'iPhone X',
-                        'name_en' => 'iPhone X',
-                        'code' => 'iphone_x',
-                        'description' => 'Отличный продвинутый телефон',
-                        'description_en' => 'The best phone',
-                        'image' => 'products/iphone_x.jpg',
-                        'properties' => [
-                            1, 2,
-                        ],
-                        'options' => [
-                            [
-                                1, 7,
-                            ],
-                            [
-                                1, 8,
-                            ],
-                            [
-                                2, 7,
-                            ],
-                            [
-                                2, 8,
-                            ],
-                            [
-                                3, 7,
-                            ],
-                            [
-                                3, 8,
-                            ],
-                            [
-                                4, 7,
-                            ],
-                            [
-                                4, 8,
-                            ],
-                        ],
-                    ],
-                    [
-                        'name' => 'iPhone XS',
-                        'name_en' => 'iPhone XS',
+                        'name' => 'Apple iPhone Xs',
+                        'name_en' => 'Apple iPhone Xs',
                         'code' => 'iphone_xs',
                         'description' => 'Огромный продвинутый телефон',
                         'description_en' => 'The best huge phone',
@@ -165,193 +400,8 @@ class ContentSeeder extends Seeder
                             ],
                         ],
                     ],
-                    [
-                        'name' => 'HTC One S',
-                        'name_en' => 'HTC One S',
-                        'code' => 'htc_one_s',
-                        'description' => 'Зачем платить за лишнее? Легендарный HTC One S',
-                        'description_en' => 'Why do you need to pay more? Legendary HTC One S',
-                        'image' => 'products/htc_one_s.png',
-                        'properties' => [
-                            1, 2,
-                        ],
-                        'options' => [
-                            [
-                                2, 7,
-                            ],
-                            [
-                                2, 8,
-                            ],
-                        ],
-                    ],
-                    [
-                        'name' => 'iPhone 5SE',
-                        'name_en' => 'iPhone 5SE',
-                        'code' => 'iphone_5se',
-                        'description' => 'Отличный классический iPhone',
-                        'description_en' => 'The best classic iPhone',
-                        'image' => 'products/iphone_5.jpg',
-                        'properties' => [
-                            1, 2,
-                        ],
-                        'options' => [
-                            [
-                                1, 7,
-                            ],
-                            [
-                                1, 8,
-                            ],
-                            [
-                                3, 7,
-                            ],
-                            [
-                                3, 8,
-                            ],
-                            [
-                                4, 7,
-                            ],
-                            [
-                                4, 8,
-                            ],
-                        ],
-                    ],
-                    [
-                        'name' => 'Samsung Galaxy J6',
-                        'name_en' => 'Samsung Galaxy J6',
-                        'code' => 'samsung_j6',
-                        'description' => 'Современный телефон начального уровня',
-                        'description_en' => 'Modern phone of basic level',
-                        'image' => 'products/samsung_j6.jpg',
-                        'properties' => [
-                            1, 2,
-                        ],
-                        'options' => [
-                            [
-                                4, 7,
-                            ],
-                        ],
-                    ],
                 ]
             ],
-            [
-                'name' => 'Портативная техника',
-                'name_en' => 'Portable',
-                'code' => 'portable',
-                'description' => 'Раздел с портативной техникой.',
-                'description_en' => 'Section with portables.',
-                'image' => 'categories/portable.jpg',
-                'products' => [
-                    [
-                        'name' => 'Наушники Beats Audio',
-                        'name_en' => 'Headphones Beats Audio',
-                        'code' => 'beats_audio',
-                        'description' => 'Отличный звук от Dr. Dre',
-                        'description_en' => 'Great sound from Dr. Dre',
-                        'image' => 'products/beats.jpg',
-                        'properties' => [
-                            1,
-                        ],
-                        'options' => [
-                            [
-                                2,
-                            ],
-                            [
-                                5,
-                            ],
-                            [
-                                6,
-                            ]
-                        ],
-                    ],
-                    [
-                        'name' => 'Камера GoPro',
-                        'name_en' => 'Camera GoPro',
-                        'code' => 'gopro',
-                        'description' => 'Снимай самые яркие моменты с помощью этой камеры',
-                        'description_en' => 'Capture the best moments of your life with that camera',
-                        'image' => 'products/gopro.jpg',
-                    ],
-                    [
-                        'name' => 'Камера Panasonic HC-V770',
-                        'name_en' => 'Camera Panasonic HC-V770',
-                        'code' => 'panasonic_hc-v770',
-                        'description' => 'Для серьёзной видео съемки нужна серьёзная камера. Panasonic HC-V770 для этих целей лучший выбор!',
-                        'description_en' => 'For serious video you need the profession camera. Panasonic HC-V770 is that you need!',
-                        'image' => 'products/video_panasonic.jpg',
-                    ],
-                ],
-            ],
-            [
-                'name' => 'Бытовая техника',
-                'name_en' => 'Appliance',
-                'code' => 'appliances',
-                'description' => 'Раздел с бытовой техникой',
-                'description_en' => 'Section with appliance',
-                'image' => 'categories/appliance.jpg',
-                'products' => [
-                    [
-                        'name' => 'Кофемашина DeLongi',
-                        'name_en' => 'Coffee machine DeLongi',
-                        'code' => 'delongi',
-                        'description' => 'Хорошее утро начинается с хорошего кофе!',
-                        'description_en' => 'Good morning starts with a good coffee!',
-                        'image' => 'products/delongi.jpg',
-                        'properties' => [
-                            1,
-                        ],
-                        'options' => [
-                            [
-                                2,
-                            ],
-                            [
-                                5,
-                            ],
-                            [
-                                6,
-                            ],
-                        ],
-                    ],
-                    [
-                        'name' => 'Холодильник Haier',
-                        'name_en' => 'Refrigerator Haier',
-                        'code' => 'haier',
-                        'description' => 'Для большой семьи большой холодильник!',
-                        'description_en' => 'The huge refrigerator for a big family!',
-                        'image' => 'products/haier.jpg',
-                        'properties' => [
-                            1,
-                        ],
-                        'options' => [
-                            [
-                                1,
-                            ],
-                            [
-                                2,
-                            ],
-                            [
-                                3,
-                            ]
-                        ],
-                    ],
-                    [
-                        'name' => 'Блендер Moulinex',
-                        'name_en' => 'Blender Moulinex',
-                        'code' => 'moulinex',
-                        'description' => 'Для самых смелых идей',
-                        'description_en' => 'For best ideas',
-                        'image' => 'products/moulinex.jpg',
-
-                    ],
-                    [
-                        'name' => 'Мясорубка Bosch',
-                        'name_en' => 'Food processor Bosch',
-                        'code' => 'bosch',
-                        'description' => 'Любите домашние котлеты? Вам определенно стоит посмотреть на эту мясорубку!',
-                        'description_en' => 'Do you like home cutlets? You need to see that combine!',
-                        'image' => 'products/bosch.jpg',
-                    ],
-                ],
-            ]
         ];
 
         foreach ($categories as $category) {

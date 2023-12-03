@@ -28,13 +28,13 @@ class CurrencySeeder extends Seeder
                 'code' => 'USD',
                 'symbol' => '$',
                 'is_main' => 0,
-                'rate' => 65,
+                'rate' => 89,
             ],
             [
                 'code' => 'EUR',
                 'symbol' => '€',
                 'is_main' => 0,
-                'rate' => 70,
+                'rate' => 97,
             ],
         ]);
     }
